@@ -1,0 +1,115 @@
+/* 1. Gaya Global */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    color: black;
+}
+
+/* 2. Header */
+#header {
+    background-color: greenyellow;
+    padding: 20px 0;
+    text-align: center;
+    color: black;
+    border: 5px solid beige;
+}
+
+/* 3. Container */
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 40px;
+}
+
+/* 4. Profil */
+.profil {
+    width: 300px;
+    text-align: center;
+}
+
+.profil img {
+    gap: 20px;
+    /* width & height buat lebar tingginya foto profil */
+    width: 150px;
+    height: 150px;
+    /* pakai object-fit cover biar gambar ga penyok alias nyesuaikan bentuk wadahnya */
+    object-fit: cover;   
+    border-radius: 50%;
+    /* pakai margin-bottom biar ada jarak bawah antara gambar dan teks setelahnya */
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(14, 13, 13, 0.1);
+    box-shadow: 0 4px 12px rgb(164, 210, 164);
+
+}
+
+/* 5. Galeri */
+.galeri {
+    /* supaya galeri memenuhi lebar container */
+    width: 100%;
+}
+
+.galeri {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.galeri {
+    /* menyusun kartu secara horizontal */
+    display: flex;
+    /* biar ada jarak diantara kartu ke kartu */
+    flex-direction: row;
+    /* memberi jarak kartu secara otomatis */
+    justify-content: space-around;
+    /* jarak antar masing masing kartu */
+    gap: 20px;
+}
+
+/* 6. kartu Aktivitas */
+.kartu-aktivitas {
+    background-color: greenyellow;
+    /* garis tepi tipis */
+    border: 3px solid beige;
+    border-radius: 20px;
+    padding: 10px;
+    width: 250px;
+    /* agar padding dan border lebar */
+    box-sizing: border-box;
+    /* agar ada bayangan halus dibelakang kartu */
+    box-shadow: 0 2px 5px rgba(14, 13, 13, 0.1);
+}
+
+.kartu-aktivitas h3 {
+    margin-top: 0;
+}
+
+.kartu-aktivitas:hover {
+    /* Saat mouse diarahkan ke kartu, warna border jadi hijau dan bayangan belakang kartu berwarna pink. */
+    border-color: #4CAF50;
+    box-shadow: 0 4px 12px hotpink;
+}
+
+/* Responsif */
+/* jika lebar layar perangkat kurang dari atau sama dengan 1000px piksel */
+max-width: 1000px {
+    .galeri {
+        /* mengatur isinya berjajar secara horizontal. Tapi kalo di layar kecil, jadi vertikal */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kartu-aktivitas {
+        width: 80%;
+
+        max-width: 300px;
+        /* agar ada jarak antar kartu secara vertikal supaya tidak terlalu rapat dan mudah dibaca. */
+        margin-bottom: 20px;
+    }
+}
