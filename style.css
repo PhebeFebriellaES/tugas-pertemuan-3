@@ -98,7 +98,7 @@ body {
 
 /* Responsif */
 /* jika lebar layar perangkat kurang dari atau sama dengan 1000px piksel */
-max-width: 1000px {
+@media(max-width): 1000px {
     .galeri {
         /* mengatur isinya berjajar secara horizontal. Tapi kalo di layar kecil, jadi vertikal */
         flex-direction: column;
